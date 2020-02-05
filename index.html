@@ -123,73 +123,75 @@ ssl.ec-curve = "secp384r1"
 
     <div class="row">
       <div class="col-xs-12 column">
-      <p><a href="https://ssldecoder.daniel-ruf.de/">
-          <h3>Test your SSL config</h3>
-        </a>.</p>
-      <h2>Warning</h2>
-      These examples are meant for sysadmins who have done this before (and sysadmins are forced to support Windows XP
-      with IE &lt; 9, therefore des3cbc), as an easily copy-pastable example, not for newbies who have no idea what
-      all
-      this means. The settings are very secure, but if you don't know what you are doing might make your website and
-      subdomains <strong>unavailable for a long, long time</strong> (see <a
-        href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>). Research what you are doing and
-      think before you act.<br />
-      <strong>Other suggestions</strong>
-      <ul>
-        <li>sha256 certificates</li>
-        <li>4096-bit private key</li>
-        <li>&gt;2048 DH Pool size -
-          <pre>openssl dhparam -out dhparams.pem 4096</pre></code></pre>
-        </li>
-        <li><a href="https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html">HTTP Public Key
-            Pinning</a></a></li>
-      </ul>
-      <h2>Why?</h2>
-      <a href="https://www.ssllabs.com/ssltest/analyze.html?d=cipherlist.daniel-ruf.de"><img src="img/a-plus.png"
-          alt="A+ JAAAAAAAAAA" class="pull-right" /></a>
-      The above ciphers are Copy Pastable in your nginx, Lighttpd or Apache config. These provide Strong SSL Security
-      for all modern browsers, plus you get an A+ on the <a
-        href="https://www.ssllabs.com/ssltest/analyze.html?d=cipherlist.daniel-ruf.de">SSL Labs Test</a>. In short, they set a
-      strong
-      Forward Secrecy enabled ciphersuite, they disable SSLv2 and SSLv3, add HTTP Strict Transport Security and
-      X-Frame-Deny headers and enable OCSP Stapling (except on Lighttpd, it does not support that yet).
-      <br />Using IIS? Check out <a href="https://www.nartac.com/Products/IISCrypto/Default.aspx">IIS Crypto</a>.
-      Other
-      software like Zeus, Tomcat? Detailed info? Read the <a
-        href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla Page</a>.
-      <br />Cipherli.st is made by <a href="https://daniel-ruf.de">Daniel Ruf (daniel-ruf.de)</a> &amp; <a
-        href="http://tnx.nl">Juerd</a> (not the server admin, suggestions to Remy or as pull request) after the idea
-      spawned at a <a href="https://privacycafe.nl/">Privacy Cafe</a> at <a href="https://revspace.nl">Revspace</a>.
-      The
-      image is Public Domain from <a href="https://commons.wikimedia.org/wiki/File:Heart-padlock.svg">here</a>.
-      Feedback
-      <a href="https://github.com/DanielRuf/cipherli.st/issues">here please</a>. Source code <a
-        href="https://github.com/DanielRuf/cipherli.st">here</a>.
-      <div class="row" style="clear: both;">
-        <div class="col-md-4 column">
-          <h3>Tweet</h3>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://cipherlist.daniel-ruf.de"
-            data-text="Enable strong SSL Security on your site with Cipherli.st " data-size="large" data-count="none"
-            data-hashtags="cipherlist" data-dnt="true">Tweet</a>
-          <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+        <p><a href="https://ssldecoder.daniel-ruf.de/">
+            <h3>Test your SSL config</h3>
+          </a>.</p>
+        <h2>Warning</h2>
+        These examples are meant for sysadmins who have done this before (and sysadmins are forced to support Windows XP
+        with IE &lt; 9, therefore des3cbc), as an easily copy-pastable example, not for newbies who have no idea what
+        all
+        this means. The settings are very secure, but if you don't know what you are doing might make your website and
+        subdomains <strong>unavailable for a long, long time</strong> (see <a
+          href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>). Research what you are doing and
+        think before you act.<br />
+        <strong>Other suggestions</strong>
+        <ul>
+          <li>sha256 certificates</li>
+          <li>4096-bit private key</li>
+          <li>&gt;2048 DH Pool size -
+            <pre>openssl dhparam -out dhparams.pem 4096</pre></code></pre>
+          </li>
+          <li><a href="https://raymii.org/s/articles/HTTP_Public_Key_Pinning_Extension_HPKP.html">HTTP Public Key
+              Pinning</a></a></li>
+        </ul>
+        <h2>Why?</h2>
+        <a href="https://www.ssllabs.com/ssltest/analyze.html?d=cipherlist.daniel-ruf.de"><img src="img/a-plus.png"
+            alt="A+ JAAAAAAAAAA" class="pull-right" /></a>
+        The above ciphers are Copy Pastable in your nginx, Lighttpd or Apache config. These provide Strong SSL Security
+        for all modern browsers, plus you get an A+ on the <a
+          href="https://www.ssllabs.com/ssltest/analyze.html?d=cipherlist.daniel-ruf.de">SSL Labs Test</a>. In short,
+        they set a
+        strong
+        Forward Secrecy enabled ciphersuite, they disable SSLv2 and SSLv3, add HTTP Strict Transport Security and
+        X-Frame-Deny headers and enable OCSP Stapling (except on Lighttpd, it does not support that yet).
+        <br />Using IIS? Check out <a href="https://www.nartac.com/Products/IISCrypto/Default.aspx">IIS Crypto</a>.
+        Other
+        software like Zeus, Tomcat? Detailed info? Read the <a
+          href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla Page</a>.
+        <br />Cipherlist is made by <a href="https://daniel-ruf.de">Daniel Ruf (daniel-ruf.de)</a> &amp; <a
+          href="http://tnx.nl">Juerd</a> (not the server admin, suggestions to Remy or as pull request) after the idea
+        spawned at a <a href="https://privacycafe.nl/">Privacy Cafe</a> at <a href="https://revspace.nl">Revspace</a>.
+        The
+        image is Public Domain from <a href="https://commons.wikimedia.org/wiki/File:Heart-padlock.svg">here</a>.
+        Feedback
+        <a href="https://github.com/DanielRuf/cipherli.st/issues">here please</a>. Source code <a
+          href="https://github.com/DanielRuf/cipherli.st">here</a>.
+        <div class="row" style="clear: both;">
+          <div class="col-md-4 column">
+            <h3>Tweet</h3>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://cipherlist.daniel-ruf.de"
+              data-text="Enable strong SSL Security on your site with Cipherlist " data-size="large" data-count="none"
+              data-hashtags="cipherlist" data-dnt="true">Tweet</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+          </div>
+          <div class="col-md-4 column">
+            <h3>Facebook</h3>
+            <a href="https://www.facebook.com/sharer.php?u=https://cipherlist.daniel-ruf.de">
+              <img src="img/dislike.png" width="150" height="80" alt="dislike this on facebook" />
+            </a>
+          </div>
         </div>
-        <div class="col-md-4 column">
-          <h3>Facebook</h3>
-          <a href="https://www.facebook.com/sharer.php?u=https://cipherlist.daniel-ruf.de">
-            <img src="img/dislike.png" width="150" height="80" alt="dislike this on facebook" />
-          </a>
-        </div>
+        <hr />
       </div>
-      <hr />
-    </div>
     </div>
 
-    
+
     <div class="row">
-      
-      <div class="column">
+
+      <div class="col-xs-12 column">
         <h2>Other Software</h2>
-      <p><a href="https://github.com/DanielRuf/cipherlist.daniel-ruf.de">Pull requests for other software welcome</a></p>
+        <p><a href="https://github.com/DanielRuf/cipherlist.daniel-ruf.de">Pull requests for other software welcome</a>
+        </p>
 
       </div>
 
@@ -291,19 +293,19 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>Hitch TLS Proxy</h2>
         <pre class="pre-trans" id="hitchconfig">
-  ciphers = "EECDH+AESGCM:EDH+AESGCM"
-  prefer-server-ciphers = on
+ciphers = "EECDH+AESGCM:EDH+AESGCM"
+prefer-server-ciphers = on
             </pre>
       </div>
 
       <div class="col-md-6 column">
         <h2>Cyrus IMAP</h2>
         <pre class="pre-trans" id="cyrusconfig">
-  tls_server_cert: /etc/ssl/private/cyrus.crt
-  tls_server_key: /etc/ssl/private/cyrus.key
-  tls_client_ca_file: /etc/ssl/private/intermediate.pem
-  tls_ciphers: EECDH+AESGCM:EDH+AESGCM
-  tls_versions: tls1_2
+tls_server_cert: /etc/ssl/private/cyrus.crt
+tls_server_key: /etc/ssl/private/cyrus.key
+tls_client_ca_file: /etc/ssl/private/intermediate.pem
+tls_ciphers: EECDH+AESGCM:EDH+AESGCM
+tls_versions: tls1_2
           </pre>
       </div>
 
@@ -341,21 +343,21 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>MySQL</h2>
         <pre class="pre-trans" id="mysqlconfig">
-    [mysqld]
-    ssl-ca=/etc/mysql-ssl/ca-cert.pem
-    ssl-cert=/etc/mysql-ssl/server-cert.pem
-    ssl-key=/etc/mysql-ssl/server-key.pem
-    ssl-cipher=EECDH+AESGCM:EDH+AESGCM
-    # replication:
-    GRANT REPLICATION SLAVE ON *.* to ‘repl’@’%’ REQUIRE SSL;
-    STOP SLAVE;
-    CHANGE MASTER MASTER_SSL=1,
-    MASTER_SSL_CA=’/etc/mysql-ssl/ca-cert.pem’,
-    MASTER_SSL_CERT=’/etc/mysql-ssl/client-cert.pem’,
-    MASTER_SSL_KEY=’/etc/mysql-ssl/client-key.pem';
-    SHOW SLAVE STATUS\G;
-    START SLAVE;
-    SHOW SLAVE STATUS\G;
+[mysqld]
+ssl-ca=/etc/mysql-ssl/ca-cert.pem
+ssl-cert=/etc/mysql-ssl/server-cert.pem
+ssl-key=/etc/mysql-ssl/server-key.pem
+ssl-cipher=EECDH+AESGCM:EDH+AESGCM
+# replication:
+GRANT REPLICATION SLAVE ON *.* to ‘repl’@’%’ REQUIRE SSL;
+STOP SLAVE;
+CHANGE MASTER MASTER_SSL=1,
+MASTER_SSL_CA=’/etc/mysql-ssl/ca-cert.pem’,
+MASTER_SSL_CERT=’/etc/mysql-ssl/client-cert.pem’,
+MASTER_SSL_KEY=’/etc/mysql-ssl/client-key.pem';
+SHOW SLAVE STATUS\G;
+START SLAVE;
+SHOW SLAVE STATUS\G;
             </pre>
         <br />
       </div>
@@ -363,11 +365,11 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>DirectAdmin</h2>
         <pre class="pre-trans" id="directadminconfig">
-    ssl_cipher=EECDH+AESGCM:EDH+AESGCM
-    SSL=1
-    cacert=/usr/local/directadmin/conf/cacert.pem
-    cakey=/usr/local/directadmin/conf/cakey.pem
-    carootcert=/usr/local/directadmin/conf/carootcert.pem
+ssl_cipher=EECDH+AESGCM:EDH+AESGCM
+SSL=1
+cacert=/usr/local/directadmin/conf/cacert.pem
+cakey=/usr/local/directadmin/conf/cakey.pem
+carootcert=/usr/local/directadmin/conf/carootcert.pem
             </pre>
         <br />
       </div>
@@ -376,9 +378,9 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>Postgresql</h2>
         <pre class="pre-trans" id="postgresconfig">
-    ssl = on
-    ssl_ciphers = 'EECDH+AESGCM:EDH+AESGCM'
-    password_encryption = on
+ssl = on
+ssl_ciphers = 'EECDH+AESGCM:EDH+AESGCM'
+password_encryption = on
             </pre>
         <br />
       </div>
@@ -386,12 +388,12 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>OpenSSH Server</h2>
         <pre class="pre-trans" id="sshdconfig">
-    Protocol 2
-    HostKey /etc/ssh/ssh_host_ed25519_key
-    HostKey /etc/ssh/ssh_host_rsa_key
-    KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
-    Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
-    MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+Protocol 2
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
             </pre>
         <br />
       </div>
@@ -399,18 +401,18 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>OpenSSH Client</h2>
         <pre class="pre-trans" id="sshconfig">
-    HashKnownHosts yes
-    Host github.com
-        MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512
-    Host *
-      ConnectTimeout 30
-      KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
-      MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
-      Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
-      ServerAliveInterval 10
-      ControlMaster auto
-      ControlPersist yes
-      ControlPath ~/.ssh/socket-%r@%h:%p
+HashKnownHosts yes
+Host github.com
+    MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512
+Host *
+  ConnectTimeout 30
+  KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+  MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+  Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+  ServerAliveInterval 10
+  ControlMaster auto
+  ControlPersist yes
+  ControlPath ~/.ssh/socket-%r@%h:%p
             </pre>
         <br />
       </div>
@@ -419,37 +421,37 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>Golang Server</h2>
         <pre class="pre-trans" id="golang-server">
-    package main
-    
-    import (
-        "crypto/tls"
-        "log"
-        "net/http"
-    )
-    
-    func main() {
-        mux := http.NewServeMux()
-        mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-            w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
-            w.Write([]byte("This is an example server.\n"))
-        })
-        cfg := &amp;tls.Config{
-            MinVersion:               tls.VersionTLS12,
-            CurvePreferences:         []tls.CurveID{tls.CurveP521, tls.CurveP384, tls.CurveP256},
-            PreferServerCipherSuites: true,
-            CipherSuites: []uint16{
-                tls.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
-                tls.TLS_RSA_WITH_AES_256_GCM_SHA384,
-            },
-        }
-        srv := &amp;http.Server{
-            Addr:         ":443",
-            Handler:      mux,
-            TLSConfig:    cfg,
-            TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
-        }
-        log.Fatal(srv.ListenAndServeTLS("tls.crt", "tls.key"))
+package main
+
+import (
+    "crypto/tls"
+    "log"
+    "net/http"
+)
+
+func main() {
+    mux := http.NewServeMux()
+    mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
+        w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
+        w.Write([]byte("This is an example server.\n"))
+    })
+    cfg := &amp;tls.Config{
+        MinVersion:               tls.VersionTLS12,
+        CurvePreferences:         []tls.CurveID{tls.CurveP521, tls.CurveP384, tls.CurveP256},
+        PreferServerCipherSuites: true,
+        CipherSuites: []uint16{
+            tls.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+            tls.TLS_RSA_WITH_AES_256_GCM_SHA384,
+        },
     }
+    srv := &amp;http.Server{
+        Addr:         ":443",
+        Handler:      mux,
+        TLSConfig:    cfg,
+        TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
+    }
+    log.Fatal(srv.ListenAndServeTLS("tls.crt", "tls.key"))
+}
             </pre>
         <br />
       </div>
@@ -458,8 +460,8 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>UniFi Controller</h2>
         <pre class="pre-trans" id="unifi-controller">
-    unifi.https.ciphers=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-    unifi.https.sslEnabledProtocols=TLSv1.2
+unifi.https.ciphers=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+unifi.https.sslEnabledProtocols=TLSv1.2
             </pre>
         <br>
       </div>
@@ -467,11 +469,11 @@ ssl_dh = &lt;/etc/dhparam.pem # openssl dhparam -out /etc/dhparam.pem 4096
       <div class="col-md-6 column">
         <h2>coTURN server</h2>
         <pre class="pre-trans" id="coturnconfig">
-    cipher-list="EECDH+AESGCM:EDH+AESGCM"
-    ec-curve-name=secp384r1
-    dh2066
-    no-tlsv1
-    no-tlsv1_1
+cipher-list="EECDH+AESGCM:EDH+AESGCM"
+ec-curve-name=secp384r1
+dh2066
+no-tlsv1
+no-tlsv1_1
             </pre>
         <br />
       </div>
